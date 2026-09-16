@@ -1,0 +1,13 @@
+import os
+
+from .base import *  # noqa: F401,F403
+
+DEBUG = False
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "").split(",")
+
+SECURE_SSL_REDIRECT = os.environ.get("SECURE_SSL_REDIRECT", "false") == "true"
+SECURE_HSTS_SECONDS = 31536000 if SECURE_SSL_REDIRECT else 0
+SESSION_COOKIE_SECURE = SECURE_SSL_REDIRECT
+CSRF_COOKIE_SECURE = SECURE_SSL_REDIRECT
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
