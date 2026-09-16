@@ -1,0 +1,13 @@
+.venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+*.egg-info/
+frontend/dist/
+backend/data/           # Merkle anchor-digest file (written by Phase 6's anchor_externally)
+.env
+*.sqlite3
