@@ -6,7 +6,8 @@ def cannoical_json(data):
     #sort_keys=True sorts the keys of the dict so it returns in the same order everytime
     #separators=(',', ':') Removes the whitespace
     #ensure_ascii=False doesn't actually modify the output but writes the letter as they are 
-print(cannoical_json({"user_id": 42, "action": "LOGIN"}))
+
+#print(cannoical_json({"user_id": 42, "action": "LOGIN"}))
 #Result : {"action":"LOGIN","user_id":42} -> sorted and no white spaces
 
 def compute_entry_hash(seq,prev_hash,payload):
